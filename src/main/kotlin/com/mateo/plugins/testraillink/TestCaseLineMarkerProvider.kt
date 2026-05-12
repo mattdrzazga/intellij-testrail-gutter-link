@@ -36,7 +36,7 @@ class TestCaseLineMarkerProvider : LineMarkerProviderDescriptor() {
             ?.takeIf { it.isNotBlank() }
             ?: return null
 
-        val url = "${TestRailSettings.getInstance().baseUrl}/index.php?/cases/view/$testCaseId"
+        val url = "${TestRailSettings.getInstance(element.project).baseUrl}/index.php?/cases/view/$testCaseId"
 
         return LineMarkerInfo(
             element,

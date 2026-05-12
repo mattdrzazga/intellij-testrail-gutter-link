@@ -1,16 +1,17 @@
 package com.mateo.plugins.testraillink
 
 import com.intellij.openapi.options.BoundConfigurable
+import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogPanel
 import com.intellij.ui.dsl.builder.COLUMNS_LARGE
 import com.intellij.ui.dsl.builder.bindText
 import com.intellij.ui.dsl.builder.columns
 import com.intellij.ui.dsl.builder.panel
 
-class TestRailSettingsConfigurable : BoundConfigurable("TestRail Gutter Link") {
+class TestRailSettingsConfigurable(private val project: Project) : BoundConfigurable("TestRail Gutter Link") {
 
     override fun createPanel(): DialogPanel {
-        val settings = TestRailSettings.getInstance()
+        val settings = TestRailSettings.getInstance(project)
         return panel {
             row("Base URL:") {
                 textField()

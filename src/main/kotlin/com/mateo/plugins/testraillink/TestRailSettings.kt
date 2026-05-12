@@ -5,8 +5,9 @@ import com.intellij.openapi.components.Service
 import com.intellij.openapi.components.State
 import com.intellij.openapi.components.Storage
 import com.intellij.openapi.components.service
+import com.intellij.openapi.project.Project
 
-@Service(Service.Level.APP)
+@Service(Service.Level.PROJECT)
 @State(
     name = "TestRailGutterLinkSettings",
     storages = [Storage("testRailGutterLink.xml")],
@@ -32,6 +33,6 @@ class TestRailSettings : PersistentStateComponent<TestRailSettings.State> {
     companion object {
         const val DEFAULT_BASE_URL = "https://example.testrail.io"
 
-        fun getInstance(): TestRailSettings = service()
+        fun getInstance(project: Project): TestRailSettings = project.service()
     }
 }
