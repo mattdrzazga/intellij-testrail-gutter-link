@@ -4,6 +4,7 @@ import com.intellij.codeInsight.daemon.LineMarkerInfo
 import com.intellij.codeInsight.daemon.LineMarkerProviderDescriptor
 import com.intellij.ide.BrowserUtil
 import com.intellij.openapi.editor.markup.GutterIconRenderer
+import com.intellij.openapi.roots.TestSourcesFilter
 import com.intellij.psi.PsiElement
 import org.jetbrains.uast.UAnnotation
 import org.jetbrains.uast.UMethod
@@ -21,6 +22,8 @@ class TestCaseLineMarkerProvider : LineMarkerProviderDescriptor() {
         // This places the icon exactly on the `@TestCase` line instead of the method signature.
         if (element.firstChild != null) return null
         if (element.text != TEST_CASE_ANNOTATION) return null
+        val virtualFile = element.containingFile?.virtualFile ?: return null
+        if (!TestSourcesFilter.isTestSources(virtualFile, element.project)) return null
 
         // Walk up through PSI to find the enclosing UAnnotation (works for both Java and Kotlin).
         // Stop at the method boundary so we don't accidentally match an unrelated outer annotation.
