@@ -100,6 +100,15 @@ src/main/resources/
   icons/testrail.svg              - gutter icon
 ```
 
+## Disclaimer
+
+This is an unofficial, community-built plugin. The author is not affiliated
+with, endorsed by, or sponsored by TestRail or Gurock Software. "TestRail" and
+any related names, logos, or icons are trademarks of their respective owners;
+the author claims no rights to them. The icon shipped with this plugin is used
+purely to indicate a link to a TestRail case and may be replaced on request of
+the rights holder.
+
 ## License
 
 See [LICENSE](LICENSE).

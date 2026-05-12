@@ -17,7 +17,15 @@
         and that is applied to a method - regardless of its package -
         is recognized. Only files under test source roots
         (e.g. <code>src/test</code>, <code>src/androidTest</code>) get the icon.
-        Works with both the K1 and K2 Kotlin compiler modes.
+        Works with both the K1 and K2 Kotlin compiler modes.<br/>
+        <br/>
+        <b>Disclaimer.</b> This is an unofficial, community-built plugin. The
+        author is not affiliated with, endorsed by, or sponsored by TestRail or
+        Gurock Software. "TestRail" and any related names, logos, or icons are
+        trademarks of their respective owners; the author claims no rights to
+        them. The icon shipped with this plugin is used purely to indicate a
+        link to a TestRail case and may be replaced on request of the rights
+        holder.
     ]]></description>
 
     <depends>com.intellij.modules.platform</depends>
