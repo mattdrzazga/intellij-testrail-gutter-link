@@ -36,7 +36,7 @@ class TestCaseLineMarkerProvider : LineMarkerProviderDescriptor() {
             ?.takeIf { it.isNotBlank() }
             ?: return null
 
-        val url = TESTRAIL_CASE_URL_PREFIX + testCaseId
+        val url = "${TestRailSettings.getInstance().baseUrl}/index.php?/cases/view/$testCaseId"
 
         return LineMarkerInfo(
             element,
@@ -52,7 +52,5 @@ class TestCaseLineMarkerProvider : LineMarkerProviderDescriptor() {
     companion object {
         private const val TEST_CASE_ANNOTATION = "TestCase"
         private const val TEST_CASE_ID_ATTR = "testCaseId"
-        private const val TESTRAIL_CASE_URL_PREFIX =
-            "https://example.testrail.io/index.php?/cases/view/"
     }
 }

@@ -26,6 +26,11 @@
         <codeInsight.lineMarkerProvider
             language="kotlin"
             implementationClass="com.mateo.plugins.testraillink.TestCaseLineMarkerProvider"/>
+        <applicationConfigurable
+            parentId="tools"
+            id="com.mateo.plugins.testraillink.settings"
+            displayName="TestRail Gutter Link"
+            instance="com.mateo.plugins.testraillink.TestRailSettingsConfigurable"/>
     </extensions>
 
     <extensions defaultExtensionNs="org.jetbrains.kotlin">
