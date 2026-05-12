@@ -61,9 +61,19 @@ Requirements: JDK 17.
 ./gradlew buildPlugin
 ```
 
-The artifact lands in `build/distributions/`.
+The installable plugin zip is written to:
 
-To run a sandbox IDE with the plugin installed:
+```
+build/distributions/testrail-gutter-link-<version>.zip
+```
+
+where `<version>` is the `pluginVersion` from `gradle.properties` (currently
+`1.0.0`, so the file is `build/distributions/testrail-gutter-link-1.0.0.zip`).
+Feed that path to **Settings → Plugins → ⚙ → Install Plugin from Disk…** in
+any compatible IDE.
+
+To run a sandbox IDE with the plugin pre-installed (useful for iterating
+during development):
 
 ```
 ./gradlew runIde
