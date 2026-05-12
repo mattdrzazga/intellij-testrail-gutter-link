@@ -10,11 +10,11 @@
         <br/>
         <b>Configuration.</b> Set your TestRail base URL per project under
         <b>Settings &rarr; Tools &rarr; TestRail Gutter Link</b>. The plugin opens
-        <code>&lt;base-url&gt;/index.php?/cases/view/&lt;id&gt;</code> &mdash; for
+        <code>&lt;base-url&gt;/index.php?/cases/view/&lt;id&gt;</code> - for
         example, <code>https://your-company.testrail.io/index.php?/cases/view/12345</code>.<br/>
         <br/>
         <b>Matching.</b> Any annotation whose simple name is <code>TestCase</code>
-        and that is applied to a method &mdash; regardless of its package &mdash;
+        and that is applied to a method - regardless of its package -
         is recognized. Only files under test source roots
         (e.g. <code>src/test</code>, <code>src/androidTest</code>) get the icon.
         Works with both the K1 and K2 Kotlin compiler modes.

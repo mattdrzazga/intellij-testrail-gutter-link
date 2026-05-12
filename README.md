@@ -15,7 +15,7 @@ a URL of the form:
 <base-url>/index.php?/cases/view/<testCaseId>
 ```
 
-Example — with the default base URL `https://example.testrail.io`:
+Example - with the default base URL `https://example.testrail.io`:
 
 ```kotlin
 @TestCase(testCaseId = "12345")
@@ -26,7 +26,7 @@ The gutter icon on the `@TestCase` line opens
 `https://example.testrail.io/index.php?/cases/view/12345`.
 
 Matching is based purely on the simple annotation name, so any `@TestCase`
-declaration with a `testCaseId: String` attribute works — you do not need a
+declaration with a `testCaseId: String` attribute works - you do not need a
 specific import or framework.
 
 ## Configuration
@@ -43,7 +43,7 @@ https://your-company.testrail.io
 ```
 
 Trailing slashes are trimmed automatically. The value is stored in
-`.idea/testRailGutterLink.xml`. Changes take effect on the next gutter click —
+`.idea/testRailGutterLink.xml`. Changes take effect on the next gutter click -
 no IDE restart required.
 
 ## Installation
@@ -92,12 +92,12 @@ during development):
 
 ```
 src/main/kotlin/com/mateo/plugins/testraillink/
-  TestCaseLineMarkerProvider.kt   — gutter icon + click handler
-  TestRailSettings.kt             — per-project PersistentStateComponent
-  TestRailSettingsConfigurable.kt — Settings UI page
+  TestCaseLineMarkerProvider.kt   - gutter icon + click handler
+  TestRailSettings.kt             - per-project PersistentStateComponent
+  TestRailSettingsConfigurable.kt - Settings UI page
 src/main/resources/
-  META-INF/plugin.xml             — plugin manifest, extension points
-  icons/testrail.svg              — gutter icon
+  META-INF/plugin.xml             - plugin manifest, extension points
+  icons/testrail.svg              - gutter icon
 ```
 
 ## License
